@@ -1,0 +1,38 @@
+{
+  "name": "wc-react-demo",
+  "private": true,
+  "version": "1.0.0",
+  "source": "src/index.tsx",
+  "module": "dist/subscription.min.js",
+  "type": "module",
+  "scripts": {
+    "tsc:dev": "tsc --watch",
+    "tsc": "tsc",
+    "vite:dev": "vite",
+    "vite:build": "tsc && vite build",
+    "vite:preview": "vite preview",
+    "esb:dev": "esbuild src/index.tsx --bundle --outfile=dist/subscription.js --servedir=./ --serve --watch",
+    "esb:build": "esbuild src/index.tsx --bundle --minify --sourcemap --outfile=dist/subscription.min.js --tree-shaking=true",
+    "serve": "http-server ./ -o /vite.html --cors",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "esbuild": "^0.21.3",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "http-server": "^14.1.1",
+    "process": "^0.11.10",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  }
+}
